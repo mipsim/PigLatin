@@ -102,3 +102,18 @@ public String pigLatin(String sWord)
 
 	return "ERROR!";
 }
+
+
+//public String wordCheck(String sWord)
+
+//{
+//	String temp = new String();
+
+//	for (int i = 0; i <sWord.length(); i++)
+//	{
+//		if ((sWord.subString(i, i+1)).equals == " ")
+//			temp = temp + pigLatin(sWord.substring(i+1));
+//	}
+
+//	return temp;
+//}
