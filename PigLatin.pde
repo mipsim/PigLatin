@@ -7,18 +7,12 @@ import java.util.*;
 public void setup() 
 {
 	String lines[] = loadStrings("words.txt");
-	String hymn[] = loadStrings("LowellHymn.txt");
 
 	System.out.println("there are " + lines.length + " lines");
 	
 	for (int i = 0 ; i < lines.length; i++)
 	{
 	  System.out.println(pigLatin(lines[i]));
-	}
-
-	for (int i = 0 ; i < hymn.length; i++)
-	{
-	  System.out.println(sentenceLatin(hymn[i]));
 	}
 }
 
@@ -95,22 +89,4 @@ public String pigLatin(String sWord)
 	//check
 
 	return "ERROR!";
-}
-
-
-public String sentenceLatin(String str)
-{
-	String temp = new String();
-
-	for (int i = 0; i < str.length(); i++)
-	{
-		if (str.substring(i,i+1) == " ")
-		{
-			temp = temp + pigLatin(str.substring(i+1));
-		}
-	}
-	
-	temp = pigLatin(str);
-
-	return temp;
 }
